@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="main">
+        <nav>
+            <h2>Logo</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp" alt="">
+            <img src="images/light.png" alt="" class="light" id="light">
+        </div>
+
+        <div class="text">
+            <h1>Click Here to turn off/on the light.</h1>
+            <button type="button" onclick="btn_function()" id="btn"><span></span></button>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var light = document.getElementById("light");
+
+        function btn_function()
+        {
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+    </script>
 </body>
 </html>
